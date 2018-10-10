@@ -1,12 +1,11 @@
 require 'student'
-require 'test'
-require 'feedback'
+# require 'test'
+# require 'feedback'
 
 describe Student do
   subject(:student) { Student.new }
-  let(:test) { double(:test) }
-  let(:feedback1) { double :feedback, happiness: 4 }
-  let(:feedback2) { double :feedback, happiness: 4 }
+  let(:feedback) { double :feedback, happiness: 4 }
+  let(:test) { double :test, pretty_date_taken: Date.today.to_s, score: 1 }
 
   describe '#full_name' do
     it 'returns the student first name and last name' do
@@ -24,7 +23,7 @@ describe Student do
     it 'returns the average happiness reported' do
       # feedback_1 = Feedback.new(4, Date.today)
       # feedback_2 = Feedback.new(4, Date.today)
-      student = Student.new(feedbacks: [feedback1, feedback2])
+      student = Student.new(feedbacks: [feedback, feedback])
 
       expect(student.happiness).to eq 4
     end
@@ -36,9 +35,9 @@ describe Student do
 
   describe '#test_scores' do
     it 'returns all test scores' do
-      test_1 = Test.new(Date.today, [Answer.new(5, 5)])
-      test_2 = Test.new(Date.today, [Answer.new(6, 6)])
-      student = Student.new(tests: [test_1, test_2])
+      # test_1 = Test.new(Date.today, [Answer.new(5, 5)])
+      # test_2 = Test.new(Date.today, [Answer.new(6, 6)])
+      student = Student.new(tests: [test, test])
 
       expect(student.test_scores).to eq({ "#{ Date.today.to_s }" => [1, 1] })
     end
