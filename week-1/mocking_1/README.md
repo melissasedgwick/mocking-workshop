@@ -25,3 +25,7 @@ Your task: isolate the unit tests in `./spec`.
 1. test.score method.
 2. student.happiness method.
 3. student.test_scores method.
+
+## Comments from Melissa
+
+I've updated the unit tests in `./spec` to be isolated tests and have confirmed with a coach that they have been isolated correctly.
