@@ -44,3 +44,7 @@ You job is to finish it.
 * There are a few passing unit tests in `/great`.  You will probably want to add to these.
 
 * There are some feature tests in `great/spec/feature_spec.rb`.  These are currently failing.  They should pass when you've implemented all the functionality.
+
+## Comments from Melissa
+
+I've updated the code and tests in the `great` folder with the completed challenge. Confirmed with a coach that the classes have been delegated correctly and that the tests are sufficient. 
